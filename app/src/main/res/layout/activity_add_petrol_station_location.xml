@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
+    tools:context=".AddPetrolStationLocation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:text="Get Current Location"
+                android:textColor="@color/yellow"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addressLayout"
+            android:layout_below="@id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address: "
+                android:textColor="@color/yellow"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/idAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:textColorHint="@color/yellow"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cityLayout"
+            android:layout_below="@id/addressLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="City: "
+                android:textSize="30sp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/idCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:textColorHint="@color/yellow"
+                android:layout_marginLeft="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/countryLayout"
+            android:layout_below="@id/cityLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/city"
+                android:text="Country: "
+                android:textColor="@color/yellow"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/idCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/city"
+                android:hint="Country"
+                android:textColorHint="@color/yellow"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/latitudeLayout"
+            android:layout_below="@id/countryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/latitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/country"
+                android:text="Latitude: "
+                android:textColor="@color/yellow"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/idLatitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/country"
+                android:hint="Latitude"
+                android:text="none"
+                android:textColorHint="@color/yellow"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/longitudeLayout"
+            android:layout_below="@id/latitudeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/longitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/latitude"
+                android:text="Longitude: "
+                android:textSize="30sp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/idLongitude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/latitude"
+                android:hint="Longitude"
+                android:text="none"
+                android:textColorHint="@color/yellow"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/yellow"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/longitudeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp"
+            android:layout_weight="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/getLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Locate Now"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                app:icon="@drawable/ic_location"
+                android:backgroundTint="@color/gray"
+                app:iconTint="@color/yellow"
+                android:layout_margin="5dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                app:icon="@drawable/ic_add"
+                android:padding="10dp"
+                app:iconTint="@color/yellow"
+                android:text="Add Location"
+                android:backgroundTint="@color/gray"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:layout_margin="5dp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/idProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:elevation="10dp"
+            android:indeterminateDrawable="@drawable/progress_bar"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</ScrollView>

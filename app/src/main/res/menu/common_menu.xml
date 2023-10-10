@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Refresh"
+        android:id="@+id/menu_refresh"
+        android:icon="@drawable/ic_refresh"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/overflowMenu"
+        android:icon="@drawable/ic_menu"
+        android:title="Sort"
+        app:showAsAction="always">
+
+        <menu>
+            <item android:title="Post"
+                android:id="@+id/menu_post"
+                android:icon="@drawable/ic_post"/>
+
+            <item android:title="Update Petrol Price"
+                android:id="@+id/menu_update_petrol_station_price"
+                android:icon="@drawable/ic_gas"/>
+
+            <item android:title="Update Profile"
+                android:id="@+id/menu_update_petrol_station_data"
+                android:icon="@drawable/ic_account"/>
+
+            <item android:title="Update Email"
+                android:id="@+id/menu_update_petrol_station_email"
+                android:icon="@drawable/ic_account"/>
+
+            <item android:title="Change password"
+                android:id="@+id/menu_change_update_petrol_station_password"
+                android:icon="@drawable/ic_password"/>
+
+            <item android:title="Delete Profile"
+                android:id="@+id/menu_delete_petrol_station"
+                android:icon="@drawable/ic_delete"/>
+
+            <item android:title="Log out"
+                android:id="@+id/menu_logout"
+                android:icon="@drawable/ic_logout"/>
+        </menu>
+    </item>
+</menu>

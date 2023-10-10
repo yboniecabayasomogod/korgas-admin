@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
+    tools:context=".UpdatePetrolStationEmail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/black_shade_2"
+            android:background="@drawable/rounded_drawable"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/subTitle_authenticate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subTitle_instructions"
+                android:fontFamily="sans-serif-black"
+                android:text="Authentication"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/subTitle_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="You can update your email address now!. Please enter your password and verify before continuing"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <!--edit text for user name-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TILOldEmail"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subTitle_authenticate"
+                android:layout_marginTop="10dp"
+                android:hint="Enter current email address"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/idTIETOldEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_account"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--edit text for password-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TILPassword"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TILOldEmail"
+                android:hint="Enter your password"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/idTIETPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_key"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--        button for creating user account.-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/idBtnAuthenticate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TILPassword"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_drawable"
+                android:text="Authenticate"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/gray"
+                app:icon="@drawable/ic_account"
+                app:iconGravity="textStart"
+                app:iconPadding="10dp"
+                app:iconTint="@color/yellow">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <ProgressBar
+                android:id="@+id/idProgressBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:elevation="10dp"
+                android:indeterminateDrawable="@drawable/progress_bar"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_drawable"
+            android:backgroundTint="@color/black_shade_2"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/subTitle_emailAuthenticate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Your email is not authenticate? verified yet!"
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <!--edit text for user name-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TILUpdateEmail"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subTitle_emailAuthenticate"
+                android:layout_marginTop="10dp"
+                android:hint="Enter current email address"
+                android:padding="5dp"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/idTIETUpdateEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_account"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--        button for creating user account.-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/idBtnUpdateEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TILUpdateEmail"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_drawable"
+                android:text="Update"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/gray"
+                app:icon="@drawable/ic_account"
+                app:iconGravity="textStart"
+                app:iconPadding="10dp"
+                app:iconTint="@color/yellow">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <ProgressBar
+                android:id="@+id/idProgressBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:elevation="10dp"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/progress_bar"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

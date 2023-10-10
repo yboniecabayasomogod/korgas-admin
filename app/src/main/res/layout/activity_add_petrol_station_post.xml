@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
+    tools:context=".UpdatePetrolStationPost">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/subTitle_uploadPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Upload Petrol Station Post"
+            android:textColor="@color/yellow"
+            android:layout_marginBottom="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imageView_post"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/subTitle_uploadPost"
+            android:background="@color/yellow"
+            android:layout_marginBottom="20dp"
+            android:scaleType="centerCrop"
+            android:outlineAmbientShadowColor="@color/white" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TILPostSaySomething"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView_post"
+            android:hint="Petrol Station Name"
+            android:padding="5dp"
+            android:textColorHint="@color/white"
+            app:hintTextColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idTIETPostSaySomething"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawablePadding="10dp"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="text|textCapSentences"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--button for Register-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/AddPostBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/TILPostSaySomething"
+            android:background="@drawable/rounded_drawable"
+            android:text="AddPost"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/gray"
+            app:icon="@drawable/ic_add"
+            app:iconGravity="textStart"
+            app:iconPadding="10dp"
+            app:iconTint="@color/yellow" />
+
+        <ProgressBar
+            android:id="@+id/idProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_bar"
+            android:visibility="gone" />
+    </RelativeLayout>
+</ScrollView>

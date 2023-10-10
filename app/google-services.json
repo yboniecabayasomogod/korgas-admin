@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "388103089181",
+    "firebase_url": "https://korgas-admin-8e596-default-rtdb.firebaseio.com",
+    "project_id": "korgas-admin-8e596",
+    "storage_bucket": "korgas-admin-8e596.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388103089181:android:8c77f9f6da3f4b907feaf4",
+        "android_client_info": {
+          "package_name": "com.developer.korgas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388103089181-4l91drlmano3edb7gfh0skptcoq4h2jl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOAheCHUfynO71qNJEKnyrDx8pJmB7ZK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388103089181-4l91drlmano3edb7gfh0skptcoq4h2jl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388103089181:android:d2a241b4ed771e3a7feaf4",
+        "android_client_info": {
+          "package_name": "com.developer.korgasadminauthentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388103089181-4l91drlmano3edb7gfh0skptcoq4h2jl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOAheCHUfynO71qNJEKnyrDx8pJmB7ZK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388103089181-4l91drlmano3edb7gfh0skptcoq4h2jl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388103089181:android:f8339172c915bf167feaf4",
+        "android_client_info": {
+          "package_name": "com.example.korgasadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388103089181-4l91drlmano3edb7gfh0skptcoq4h2jl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOAheCHUfynO71qNJEKnyrDx8pJmB7ZK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "388103089181-4l91drlmano3edb7gfh0skptcoq4h2jl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

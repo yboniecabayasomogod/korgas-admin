@@ -1,0 +1,446 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeContainer">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_shade_1"
+        tools:context=".PetrolStationProfile">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/LLProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/yellow">
+
+                <ImageView
+                    android:id="@+id/image_userProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/textViewPetrolStationName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:hint="Loading..."
+                    android:shadowColor="@color/black"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/idProgressBar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:elevation="10dp"
+                    android:indeterminateDrawable="@drawable/progress_bar"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:drawableLeft="@drawable/ic_station"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="₱etrol Station Price's "
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/black_shade_2"
+                android:background="@drawable/rounded_drawable">
+
+                <RelativeLayout
+                    android:id="@+id/layoutGasoline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/gasolinePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/ic_gasoline_red"
+                        android:drawablePadding="10dp"
+                        android:padding="3dp"
+                        android:text="Gasoline Price:"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/peroSignGasolinePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/textViewGasolinePrice"
+                        android:text="₱"
+                        android:textColor="@color/yellow"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <!--text view for petrolStation price-->
+                    <TextView
+                        android:id="@+id/textViewGasolinePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="None"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/layoutGasoline"
+                    android:layout_gravity="center"
+                    android:background="@color/yellow"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/layoutDiesel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line1">
+
+                    <TextView
+                        android:id="@+id/dieselPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/ic_gas_yellow"
+                        android:drawablePadding="10dp"
+                        android:padding="3dp"
+                        android:text="Diesel Price:"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/peroSignDiesel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/textViewDieselPrice"
+                        android:text="₱"
+                        android:textColor="@color/yellow"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <!--text view for petrolStation price-->
+                    <TextView
+                        android:id="@+id/textViewDieselPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="None"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/layoutDiesel"
+                    android:layout_gravity="center"
+                    android:background="@color/yellow"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/layoutKerosene"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line2">
+
+                    <TextView
+                        android:id="@+id/kerosenePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/ic_kerosene_blue"
+                        android:drawablePadding="10dp"
+                        android:padding="3dp"
+                        android:text="Kerosene Price:"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/peroSignKerosene"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/textViewKerosenePrice"
+                        android:text="₱"
+                        android:textColor="@color/yellow"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <!--text view for petrolStation price-->
+                    <TextView
+                        android:id="@+id/textViewKerosenePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="None"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/idProgressBar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:elevation="10dp"
+                    android:indeterminate="true"
+                    android:indeterminateDrawable="@drawable/progress_bar"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/idBtnMapLink"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_drawable"
+                    android:text="Map"
+                    android:textAllCaps="false"
+                    app:backgroundTint="@color/gray"
+                    app:icon="@drawable/ic_map"
+                    app:iconGravity="textStart"
+                    app:iconPadding="10dp"
+                    app:iconTint="@color/yellow"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/idBtnWebLink"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_drawable"
+                    android:text="Website"
+                    android:textAllCaps="false"
+                    app:backgroundTint="@color/gray"
+                    app:icon="@drawable/website_logo"
+                    app:iconSize="25dp"
+                    app:iconGravity="textStart"
+                    app:iconPadding="10dp"
+                    app:iconTint="@color/yellow"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_station"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="₱etrol Station Information "
+                android:textColor="@color/yellow"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_drawable"
+                android:padding="15dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/black_shade_2">
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:drawablePadding="10dp"
+                    android:text="Email:  "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/email"
+                    android:layout_marginStart="150dp"
+                    android:hint="Loading..."
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/textViewEmail"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/yellow" />
+
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line3"
+                    android:drawableLeft="@drawable/ic_contact"
+                    android:drawablePadding="10dp"
+                    android:text="Contact: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textViewContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line3"
+                    android:layout_alignStart="@+id/contact"
+                    android:layout_marginStart="150dp"
+                    android:hint="Loading..."
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <View
+                    android:id="@+id/line5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/textViewContact"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/yellow" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line5"
+                    android:drawableLeft="@drawable/ic_home"
+                    android:drawablePadding="10dp"
+                    android:text="Address: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textViewAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line5"
+                    android:layout_alignStart="@+id/address"
+                    android:layout_marginStart="150dp"
+                    android:hint="Loading..."
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+
+                <ProgressBar
+                    android:id="@+id/idProgressBar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="true"
+                    android:elevation="10dp"
+                    android:indeterminateDrawable="@drawable/progress_bar"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
